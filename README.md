@@ -23,28 +23,28 @@ This is an ai built using the A* Searching Algorithm and it solves the sliding p
 
 ```
 public int calcHeuristic(String state) {
-		int counter = 0;
-		//h1
-		if(whichHeuristic == 1) {
-			for(int i = 0; i < state.length(); i++) {
-				if(state.charAt(i) != '0' && state.charAt(i) != gState.charAt(i))
-					counter++;
-			}
+	int counter = 0;
+	//h1
+	if(whichHeuristic == 1) {
+		for(int i = 0; i < state.length(); i++) {
+			if(state.charAt(i) != '0' && state.charAt(i) != gState.charAt(i))
+				counter++;
 		}
-		//h2
-		else {
-			int row, col;
-			for(int i = 0; i < state.length(); i++) {
-				if(state.charAt(i) != '0') {
-					row = i / 3;
-					col = i % 3;
-					//only works for goal state of 012345678
-					counter += Math.abs((Character.getNumericValue(state.charAt(i)) / 3 - row)) + Math.abs((Character.getNumericValue(state.charAt(i)) % 3 - col));
-				}
-			}
-		}
-		return counter;
 	}
+	//h2
+	else {
+		int row, col;
+		for(int i = 0; i < state.length(); i++) {
+			if(state.charAt(i) != '0') {
+				row = i / 3;
+				col = i % 3;
+				//only works for goal state of 012345678
+				counter += Math.abs((Character.getNumericValue(state.charAt(i)) / 3 - row)) + Math.abs((Character.getNumericValue(state.charAt(i)) % 3 - col));
+			}
+		}
+	}
+	return counter;
+}
 ```
 Heuristic 1 only calculates how many numbers are not in their correct final positions
 Heuristic 2 calculates how many spaces each number is away from its correct final position
