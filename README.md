@@ -13,9 +13,9 @@ This is an ai built using the A* Searching Algorithm and it solves the sliding p
 
 ### Some things to note:
 - "0" is considered the blank space, so a different number and 0 will switch places for every move
-- 0  1  2
-  3  4  5
-  6  7  8
+- 0  1  2  
+  3  4  5  
+  6  7  8  
   is considered the final state and to change what the final state is, user has to manually go in the source code of SlidingPuzzle.java and change "gState" in main method
 - To run the program using user-inputted initial state, type numbers 0-8 in any order with no spaces inbetween
   ex: 012345678, 102837456, 582017364
@@ -46,5 +46,5 @@ public int calcHeuristic(String state) {
 	return counter;
 }
 ```
-Heuristic 1 only calculates how many numbers are not in their correct final positions
+Heuristic 1 only calculates how many numbers are not in their correct final positions  
 Heuristic 2 calculates how many spaces each number is away from its correct final position
