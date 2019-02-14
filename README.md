@@ -1,5 +1,5 @@
 ## Sliding Puzzle AI
-This is an ai built using the A* Searching Algorithm and it solves the sliding puzzle in ascending order from any solvable user-inputted starting position.
+This is an ai built using the A* Searching Algorithm and it solves the sliding puzzle. The user can either put in an initial state to solve or make the program solve a specified number of random initial states.
 
 ### How this works:
 1. make sure that the initial state is solvable (inversion count must be even)
